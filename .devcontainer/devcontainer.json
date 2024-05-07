@@ -1,0 +1,17 @@
+{
+    "name": "Python 3 + Desktop",
+    "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+    "features": {
+      "ghcr.io/devcontainers/features/desktop-lite:1": {
+        "webPort": 6080,
+        "password": "pygame"
+      }
+    },
+    "forwardPorts": [6080],
+    "portsAttributes": {
+      "6080": {
+        "label": "desktop"
+      }
+    },
+    "postCreateCommand": "pip3 install --user -r requirements.txt"
+  }
